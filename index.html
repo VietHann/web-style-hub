@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Style Hub - Bộ sưu tập giao diện web</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        header {
+            text-align: center;
+            color: white;
+            padding: 3rem 0;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        header p {
+            font-size: 1.3rem;
+            opacity: 0.9;
+        }
+
+        .section {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .section h2 {
+            color: #2c3e50;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 0.5rem;
+        }
+
+        .section p {
+            color: #666;
+            margin-bottom: 1rem;
+        }
+
+        .examples-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .example-card {
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            padding: 1.5rem;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .example-card:hover {
+            border-color: #667eea;
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+        }
+
+        .example-card h3 {
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+        }
+
+        .example-card p {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 1rem;
+        }
+
+        .example-card a {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 0.5rem 1.5rem;
+            border-radius: 25px;
+            text-decoration: none;
+            transition: transform 0.2s;
+        }
+
+        .example-card a:hover {
+            transform: scale(1.05);
+        }
+
+        .icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        footer {
+            text-align: center;
+            color: white;
+            padding: 2rem 0;
+            margin-top: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            header p {
+                font-size: 1rem;
+            }
+
+            .section h2 {
+                font-size: 1.5rem;
+            }
+
+            .examples-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎨 Web Style Hub</h1>
+            <p>Bộ sưu tập các mẫu giao diện web (HTML, CSS, JavaScript)</p>
+        </header>
+
+        <div class="section">
+            <h2>📄 Templates</h2>
+            <p>Các mẫu template hoàn chỉnh, sẵn sàng sử dụng</p>
+            <div class="examples-grid">
+                <div class="example-card">
+                    <div class="icon">🌐</div>
+                    <h3>Landing Page</h3>
+                    <p>Mẫu landing page hiện đại với navigation, hero section và features</p>
+                    <a href="templates/landing-page/index.html">Xem demo</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>✨ Effects</h2>
+            <p>Các hiệu ứng CSS và JavaScript thú vị</p>
+            <div class="examples-grid">
+                <div class="example-card">
+                    <div class="icon">🖱️</div>
+                    <h3>Button Hover</h3>
+                    <p>6 hiệu ứng hover khác nhau cho button</p>
+                    <a href="effects/button-hover/index.html">Xem demo</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>📐 Layouts</h2>
+            <p>Các layout responsive và linh hoạt</p>
+            <div class="examples-grid">
+                <div class="example-card">
+                    <div class="icon">🔲</div>
+                    <h3>Responsive Grid</h3>
+                    <p>Layout lưới tự động điều chỉnh theo màn hình</p>
+                    <a href="layouts/responsive-grid/index.html">Xem demo</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>🧩 Components</h2>
+            <p>Các component cơ bản có thể tái sử dụng</p>
+            <div class="examples-grid">
+                <div class="example-card">
+                    <div class="icon">🃏</div>
+                    <h3>Card Component</h3>
+                    <p>Component card đẹp mắt với hover effect</p>
+                    <a href="components/card/index.html">Xem demo</a>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>&copy; 2024 Web Style Hub. Học tập, thử nghiệm và tái sử dụng cho các dự án cá nhân.</p>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,167 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.container {
+    text-align: center;
+    color: white;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+p {
+    font-size: 1.2rem;
+    margin-bottom: 3rem;
+}
+
+.button-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.btn {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Button 1 - Simple Scale */
+.btn-1 {
+    background: #3498db;
+    color: white;
+}
+
+.btn-1:hover {
+    background: #2980b9;
+    transform: scale(1.1);
+}
+
+/* Button 2 - Slide Up */
+.btn-2 {
+    background: #2ecc71;
+    color: white;
+}
+
+.btn-2::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #27ae60;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+    z-index: -1;
+}
+
+.btn-2:hover::before {
+    transform: translateY(0);
+}
+
+/* Button 3 - Ripple Effect */
+.btn-3 {
+    background: #e74c3c;
+    color: white;
+}
+
+.btn-3:hover {
+    animation: ripple 0.6s ease;
+}
+
+@keyframes ripple {
+    0% {
+        box-shadow: 0 0 0 0 rgba(231, 76, 60, 0.7);
+    }
+    100% {
+        box-shadow: 0 0 0 20px rgba(231, 76, 60, 0);
+    }
+}
+
+/* Button 4 - Glow Effect */
+.btn-4 {
+    background: #9b59b6;
+    color: white;
+}
+
+.btn-4:hover {
+    box-shadow: 0 0 20px #9b59b6, 0 0 40px #9b59b6;
+}
+
+/* Button 5 - 3D Effect */
+.btn-5 {
+    background: #f39c12;
+    color: white;
+    box-shadow: 0 5px 0 #e67e22;
+}
+
+.btn-5:hover {
+    transform: translateY(3px);
+    box-shadow: 0 2px 0 #e67e22;
+}
+
+/* Button 6 - Border Expand */
+.btn-6 {
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+}
+
+.btn-6::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+    z-index: -1;
+}
+
+.btn-6:hover {
+    color: #667eea;
+}
+
+.btn-6:hover::before {
+    transform: scaleX(1);
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    .button-grid {
+        grid-template-columns: 1fr;
+    }
+}
